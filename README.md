@@ -8,4 +8,5 @@ The data set included is based on 2014 ACS 1-year estimates: https://data.census
 
 ## Results
 The results of the analysis and visualization can be seen at: https://adrianaovalle.github.io/D3-Challenge/.
-![Newsroom](assets/data/result.gif)
+
+![Image](assets/data/result.gif)
