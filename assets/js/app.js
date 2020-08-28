@@ -1,6 +1,6 @@
 // @TODO: YOUR CODE HERE!
 
-// 1- Set Up the Chart-------------------------------------------------------------
+// 1- Set Up the Chart------------------------------------------------------------------------
 const svgWidth=960;
 const svgHeight=700;
 
@@ -14,7 +14,7 @@ const margin={
 const width=svgWidth-margin.left-margin.right-20;
 const height=svgHeight-margin.top-margin.bottom -20;
 
-//2- Creat an SVG wrapper-----------------------------------------------------------
+//2- Creat an SVG wrapper---------------------------------------------------------------------
 const svg=d3
         .select ("#scatter")
         .append ("svg")
@@ -29,7 +29,7 @@ const chartGroup=svg.append('g')
 let chosenXAxis = "income";
 let chosenYAxis = "healthcare";
 
-//2- Function used for updating x-scale var upon click on axis label-------------------
+//2- Function used for updating x-scale var upon click on axis label--------------------------
 function xScale(data, chosenXAxis){
     //Create Scales
     const xLinearScale=d3.scaleLinear()
@@ -38,7 +38,7 @@ function xScale(data, chosenXAxis){
     return xLinearScale;
 }
 
-//3- Function used for updating y-scale var upon click on axis label---------------------
+//3- Function used for updating y-scale var upon click on axis label--------------------------
 function yScale(data, chosenYAxis){
     //Create Scales
     const yLinearScale=d3.scaleLinear()
@@ -47,7 +47,7 @@ function yScale(data, chosenYAxis){
     return yLinearScale;
 }
 
-// 4. function used for updating xAxis upon click on this axis-----------------------------
+// 4. function used for updating xAxis upon click on this axis--------------------------------
 function renderXAxis (newXScale, xAxis){
     const bottomAxis=d3.axisBottom (newXScale);
     xAxis.transition()
@@ -56,7 +56,7 @@ function renderXAxis (newXScale, xAxis){
     return xAxis;
 }
 
-// 5.function used for updating yAxis upon click on this axis-----------------------------
+// 5.function used for updating yAxis upon click on this axis---------------------------------
 function renderYAxis (newYScale, yAxis){
     const leftAxis=d3.axisLeft(newYScale);
     yAxis.transition()
@@ -65,7 +65,7 @@ function renderYAxis (newYScale, yAxis){
     return yAxis;
 }
 
-//6.function used for updating circles group with transition to new circles in x
+//6.function used for updating circles group with transition to new circles in x--------------
 function renderXCircles (circlesGroup, newXScale, chosenXAxis) {
     circlesGroup.transition()
                 .duration (1000)
@@ -73,7 +73,7 @@ function renderXCircles (circlesGroup, newXScale, chosenXAxis) {
     return circlesGroup;
 }
 
-//7.function used for updating circles group with transition to new circles in y
+//7.function used for updating circles group with transition to new circles in y--------------
 function renderYCircles (circlesGroup, newYScale, chosenYAxis) {
     circlesGroup.transition()
                 .duration (1000)
@@ -81,7 +81,7 @@ function renderYCircles (circlesGroup, newYScale, chosenYAxis) {
     return circlesGroup;
 }
 
-//8.function used for updating circles group with new tooltip
+//8.function used for updating circles group with new tooltip---------------------------------
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     var xlabel;
     var ylabel;
@@ -130,7 +130,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
   }
 
 
-//9. function to update text within circles
+//9. function to update text within circles---------------------------------------------------
 function renderXCircleText(textCircles, newXScale, chosenXAxis) {
 
     textCircles.transition()
@@ -150,7 +150,7 @@ function renderXCircleText(textCircles, newXScale, chosenXAxis) {
   }
   
 
-//9. Retrieve data from CSV file and execute everything below
+//10. Retrieve data from CSV file and execute everything below--------------------------------
 d3.csv('assets/data/data.csv').then(function (stateData, err){
     if (err)throw err;
     console.log(stateData);
