@@ -40,7 +40,7 @@
   margin: 0;
 }
 
-.d3-tip {
+.tooltip {
   padding: 6px;
   font-size: 12px;
   line-height: 1;
@@ -48,8 +48,12 @@
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
+  background: rgba(34, 33, 33, 0.8);
+  border-radius: 10px;
+}
+
+.conclu{
+  color: rgb(99, 99, 173);
 }
 
 /* Mobile Rules */
