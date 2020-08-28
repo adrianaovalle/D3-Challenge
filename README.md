@@ -7,4 +7,4 @@ The goal is to investigate health risks facing particular demographics. The info
 The data set included is based on 2014 ACS 1-year estimates: https://data.census.gov/cedsci/. The current data set incldes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
 
 ## Results
-The results of the analysis and visualization can be seen at: 
+The results of the analysis and visualization can be seen at: https://adrianaovalle.github.io/D3-Challenge/.
